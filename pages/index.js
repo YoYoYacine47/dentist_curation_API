@@ -1,10 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
-import Image from "next/image";
 import Header from "./header";
 import JsonDataDisplay from "./jsonToTable";
-import { json2csv } from "json-2-csv";
-import { CSVLink, CSVDownload } from "react-csv";
 
 export default function Home() {
   // const endpoint = "https://yoyoyacine47.pythonanywhere.com/api/";
@@ -25,34 +22,9 @@ export default function Home() {
     console.log({ date_from });
   };
 
-  const downloadCSV = () => {
-    json2csv(
-      dataset,
-      (err, csv) => {
-        new CSVLink(csv);
-      },
-      {}
-    );
-  };
-  const downloadEXCEL = () => {
-    json2csv(
-      dataset,
-      (err, csv) => {
-        new CSVLink(csv);
-      },
-      options
-    );
-  };
-  const downloadJSON = async () => {
-    //const blob = await response.blob(); // blob just as yours
-    //const href = URL.createObjectURL(response);
-    const link = document.createElement("a");
-    link.href = response;
-    link.download = "file.xlsx";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  const downloadCSV = () => {};
+  const downloadEXCEL = () => {};
+  const downloadJSON = async () => {};
 
   return (
     <div className="h-screen bg-gray-50 max-w-7xl mx-auto">
