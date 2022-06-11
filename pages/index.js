@@ -8,9 +8,9 @@ export default function Home() {
   const [date_to, setDate_to] = useState();
   const [date_from, setDate_from] = useState();
   const [dataset, setDataset] = useState();
-  const endpoint = `http://yoyoyacine47.pythonanywhere.com/api/${date_from}/${date_to}`;
+  const endpoint = `https://yoyoyacine47.pythonanywhere.com/api/${date_from}/${date_to}`;
   const url =
-    "http://yoyoyacine47.pythonanywhere.com/api/<DATE_FROM>/<DATE_TO>";
+    "https://yoyoyacine47.pythonanywhere.com/api/<DATE_FROM>/<DATE_TO>";
   let response = null;
   const getDate = async () => {
     response = await fetch(endpoint);
