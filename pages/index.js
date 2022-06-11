@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useState } from "react";
-import Header from "./header";
-import JsonDataDisplay from "./jsonToTable";
+import Header from "../components/header";
+import JsonDataDisplay from "../components/jsonToTable";
 
 export default function Home() {
   // const endpoint = "https://yoyoyacine47.pythonanywhere.com/api/";
